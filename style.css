@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,li{
+    list-style:none
+}
+.wrapper{
+    display:flex;
+    background: #f2f2f2;
+    flex-direction: column;
+}
+.header{
+    height:220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    /* display: flex;
+
+    margin: 0 auto; */
+}
+.main{
+    width:925px;
+    margin: 0 auto;
+    position: relative;
+}
+.main .images{
+    height: 400px;
+    display: flex;
+    
+    z-index: 1;
+    transition: all 0.5s;
+}
+.main .inner{
+    overflow: hidden;
+    box-shadow: rgb(170, 170, 170) 0px 0px 3px 0px;
+}
+.main .inner .before{
+    content:'';
+    position: absolute;
+    content:'';
+    width: 0;
+    height: 0;
+    top:400px;
+    left:362px;
+    border-width: 10px;
+    border-style: solid;
+    border-color:  #c4c4c4 transparent transparent transparent;
+}
+.main .inner .after{
+    content:'';
+    position: absolute;
+    content:'';
+    width: 0;
+    height: 0;
+    top:398px;
+    left:362px;
+    border-width: 10px;
+    border-style: solid;
+    border-color:  white transparent transparent transparent;
+}
+.main .buttons{
+    background: linear-gradient(to bottom, #fafafa 0%,#ececec 100%); 
+    box-shadow: rgb(170, 170, 170) 0px 0px 3px 0px;
+    width:925px;
+    height: 49px;
+    margin-top: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons > ul{
+    display: flex;
+}
+ul > li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    box-shadow: rgb(170, 170, 170) 0px 0px 3px 0px;
+    height: 47px;
+    width: 60px;
+    user-select:none;
+}
+.footer{
+    height:85px;
+    display: flex;
+}
+.footer > p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+ul >li.active{
+    background: linear-gradient(to right, #b7b7b7 0%,#ededed 50%,#b7b7b7 100%);
+}
+ul >li.wait:hover{
+    background: linear-gradient(to bottom, #f1f1f1 0%,#fafafa 30%,#f1f1f1 100%); 
+    cursor:pointer
+}
